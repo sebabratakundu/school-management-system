@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/admission_slip.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <title>
+        admission slip
+    </title>
+    <script src="js/admission_slip.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+
+<body>
+    <script>
+        if (sessionStorage.getItem('login') == null) {
+            window.location = 'https://www.google.com';
+        }
+    </script>
+    <div class="container pt-5">
+        <table align="center" class="table w-50 table-bordered table-striped">
+            <tr>
+                <td class="student-pic" colspan="1" width="150" height="150"></td>
+                <td align="center" colspan="3">
+                    <h2 class="school-name"></h2>
+                    <span class="tag-line"></span><br>
+                    <button class="mob-phn-no btn btn-primary border-0 shadow-sm mt-2"></button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1"><b>CANDIDATE NAME</b></td>
+                <td class="student-name" colspan="1"></td>
+                <td colspan="1"><b>DOB</b></td>
+                <td class="dob" colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="1"><b>GENDER</b></td>
+                <td class="gender" colspan="1"></td>
+                <td colspan="1"><b>ADMISSION DATE</b></td>
+                <td class="admission-date" colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="1"><b>FATHER NAME</b></td>
+                <td class="father-name" colspan="1"></td>
+                <td colspan="1"><b>ADMITED IN</b></td>
+                <td class="admited-in" colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="1"><b>MOTHER NAME</b></td>
+                <td class="mother-name" colspan="3"></td>
+            </tr>
+            <tr>
+                <td colspan="1"><b>MOBILE NUMBER</b></td>
+                <td class="mob-no-1" colspan="2"></td>
+                <td class="mob-no-2" colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="1"><b>ADDRESS</b></td>
+                <td class="student-address" colspan="3"></td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+            </tr>
+        </table>
+        <center>
+        <button class="btn btn-dark">Print</button>
+        </center>
+    </div>
+
+
+
+</body>
+
+</html>

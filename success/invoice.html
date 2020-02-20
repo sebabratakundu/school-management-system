@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <style>
+        span{
+            font-size:12px;
+            font-weight:bold;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>
+        invoice
+    </title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/invoice.js"></script>
+</head>
+
+<body>
+    <script>
+        if (sessionStorage.getItem('login') == null) {
+            window.location = 'https://www.google.com';
+        }
+    </script>
+    <div class="container">
+        <div class="invoice-box w-50 text-center mx-auto mt-5">
+            <div class="row">
+                <div class="col-md-2 d-flex border border-dark p-1 school-logo border-bottom-0"></div>
+                <div class="col-md-10 border border-dark border-left-0 border-bottom-0">
+                    <h5 class="school-name p-3 m-0" style="text-transform: uppercase"></h5>
+                    <span class="tag" style="text-transform: capitalize;font-size:14px"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 border border-dark border-bottom-0">
+                    <span><b>STUDENT NAME</b></span>
+                </div>
+                <div class="col-md-6 border border-dark border-left-0 border-bottom-0">
+                    <span class="student-name"></span>
+                </div>
+                <div class="col-md-2 border border-dark border-left-0 border-bottom-0">
+                    <span><b>INVOICE NO</b></span>
+                </div>
+                <div class="col-md-1 border border-dark border-left-0 border-bottom-0">
+                    <span class="invoice-no"></span>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-3 border border-dark border-bottom-0">
+                        <span><b>FATHER NAME</b></span>
+                    </div>
+                    <div class="col-md-5 border border-dark border-left-0 border-bottom-0">
+                        <span class="father-name"></span>
+                    </div>
+                    <div class="col-md-2 border border-dark border-left-0 border-bottom-0">
+                        <span><b>DATE</b></span>
+                    </div>
+                    <div class="col-md-2 border border-dark border-left-0 border-bottom-0">
+                        <span class="invoice-date"></span>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-2 border border-dark border-bottom-0">
+                            <span><b>CLASS</b></span>
+                        </div>
+                        <div class="col-md-10 border border-dark border-left-0 border-bottom-0">
+                            <span class="student-class"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-7 border border-dark border-bottom-0">
+                            </div>
+                            <div class="col-md-3 border border-dark border-left-0 border-bottom-0">
+                                <span class="fee-name"></span>
+                            </div>
+                            <div class="col-md-2 border border-dark border-left-0 border-bottom-0">
+                                <span class="fee"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-7 border border-dark border-bottom-0">
+                                </div>
+                                <div class="col-md-3 border border-dark border-left-0 border-bottom-0">
+                                    <span><b>TOTAL</b></span>
+                                </div>
+                                <div class="col-md-2 border border-dark border-left-0 border-bottom-0">
+                                    <span class="total"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-md-6 border border-dark border-bottom-0">
+                                        <span class="prin-sig"></span>
+                                        <span class="prin-text"></span>
+                                    </div>
+                                    <div class="col-md-6 border border-dark border-left-0 border-bottom-0">
+                                        <span class="dir-sig"></span>
+                                        <span class="dir-text"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 border border-dark">
+                                        <span class="address"></span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-dark mt-4">Print</button>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

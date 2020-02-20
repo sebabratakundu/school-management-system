@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>
+        school management system
+    </title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid w-100 d-flex justify-content-center align-items-center overflow-hidden" id='bg-box'>
+        <div class="w-75 h-75">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="list-group">
+                        <li class="list-group-item bg-warning font-weight-bold px-0 text-center" style="font-size:12px">
+                            SCHOOL MANAGEMENT 1.0</li>
+                        <li class="list-group-item px-0 pb-0">
+                            <img src="images/pic.jpg" width='100%' alt="pic">
+                        </li>
+                        <li class="list-group-item bg-warning text-align text-light font-weight-bold text-center">
+                            <a href="#" class="list-group-link" style="font-size:12px">CONTACT US</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <ul class="nav nav-tabs" id="form-box">
+                        <li class="nav-item">
+                            <a href="#register" class="nav-link text-warning active" data-toggle="tab">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#login" class="nav-link text-warning" data-toggle="tab">Login</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content py-4" style="overflow-x:hidden">
+                        <div id="register" class="tab-pane active animated slideInLeft faster">
+                            <form id="register-form">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-primary text-light border-0">School Name</span>
+                                    </div>
+                                    <input type="text" name="school name" required="required"
+                                        placeholder="Type your school name" id="school-name"
+                                        class="form-control border-0">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-primary text-light border-0">Tag Line</span>
+                                    </div>
+                                    <input type="text" name="tag" placeholder="Tag Line" id="tag"
+                                        class="form-control border-0">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-primary text-light border-0">Email</span>
+                                    </div>
+                                    <input type="email" name="email" required="required"
+                                        placeholder="Type your email here" id="email" class="form-control border-0">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-primary text-light border-0">Password</span>
+                                    </div>
+                                    <input type="password" name="signup-password" required="required"
+                                        placeholder="Type your password here" id="signup-password"
+                                        class="form-control border-0">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-primary text-light border-0">Website</span>
+                                    </div>
+                                    <input type="text" name="website" placeholder="website" id="website"
+                                        class="form-control border-0">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-primary text-light border-0">Mobile No</span>
+                                    </div>
+                                    <input type="number" name="mobile" required="required"
+                                        placeholder="Type your mobile no" id="mobile" class="form-control border-0">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-primary text-light border-0">Address</span>
+                                    </div>
+                                    <textarea name="address" id="address" required="required"
+                                        class="form-control border-0"></textarea>
+                                </div>
+                                <div class="alert float-left w-75 d-none p-2" id="massage">
+                                    <i class="fa fa-close close d-none" id="close-icon" data-dismiss="alert" style="font-size:20px"></i>
+                                </div>
+                                <button type="submit" id="submit-btn" class="btn btn-warning float-right">Register
+                                    now</button>
+                            </form>
+                        </div>
+                        <div id="login" class="tab-pane animated slideInLeft faster">
+                            <form id="login-form">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-primary text-light border-0">username</span>
+                                    </div>
+                                    <input type="text" name="username" placeholder="yourmail@gmail.com" id="username"
+                                        class="form-control border-0">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-primary text-light border-0">password</span>
+                                    </div>
+                                    <input type="password" name="login-password" placeholder="a@113" id="login-password"
+                                        class="form-control border-0">
+                                </div>
+                                <div class="alert float-left w-75 d-none p-2" id="massage-2">
+                                    <i class="fa fa-close close" data-dismiss="alert" style="font-size:20px"></i>
+                                </div>
+                                <button type="submit" class="btn btn-warning float-right px-5">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--start delete database modal coding-->
+
+    <div class="modal animated slideInDown" id="delete-modal">
+        <div class="modal-dialog">
+            <div class="alert alert-success d-none delete-success-notice animated fadeIn">
+                <b>Delete Success ! </b>now you can register again 
+            </div>
+            <div class="modal-content hide">
+                <div class="modal-header">
+                    <h4 class="modal-title">Delete Notice</h4>
+                </div>
+                <div class="modal-body">
+                    do you want to delete previous record ?
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" id="delete-db-btn">Delete</button>
+                    <button class="btn btn-danger" id="cancel-delete" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--end delete database modal coding-->
+
+</body>
+
+</html>

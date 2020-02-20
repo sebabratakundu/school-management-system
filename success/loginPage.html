@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>
+        login page
+    </title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/login.js"></script>
+</head>
+
+<body>
+
+    <script>
+        if (sessionStorage.getItem('login') == null) {
+            window.location = 'https://www.google.com';
+        }
+    </script>
+    <div class="container-fluid overflow-hidden" id="bg-box">
+        <div class="row">
+            <div class="col-md-3 py-3">
+                <div class="bg-white py-4 px-3">
+                    <center>
+                        <div style="width:110px;height:100px;border:1px solid #ccc;box-shadow:0px 0px 2px #ddd;position: relative;">
+                            <div style="position: absolute;top:0;left:0;width:100%;height:100%" id="school-logo-box"></div>
+                            <input type="file" accept="image/*" name="school logo" id="school-logo-input" 
+                            style="position: absolute;top:0;left:0;border:1px solid red;width:100%;height:100%;opacity: 0;">
+                        </div>
+                        <h5 class="mt-3 school-name"></h5>
+                        <span class="mt-2 tag-line"></span>
+                        <button class="btn btn-info mt-2">School Management System 1.0</button>
+                    </center>
+                    <h5 class="mt-3">Director Signature</h5>
+                    <div class="custom-file director-sig">
+                        <input type="file" name="dir sig" accept="image/*" class="custom-file-input" id="dir-sig-input">
+                        <label for="dir-sig-input" class="custom-file-label">Upload</label>
+                    </div>
+                    <ul class="list-group dir-sig-box list-group-horizontal d-none">
+                        <li class="list-group-item dir-sig-li p-0 px-2 w-100"></li>
+                        <li class="list-group-item bg-danger py-2 px-3"><i class="fa fa-trash text-white text-center del-dir-sig-btn" style="font-size: 30px"></i></li>
+                    </ul>
+                    <h5 class="mt-3">Principal Signature</h5>
+                    <div class="custom-file mb-5 principle-sig">
+                        <input type="file" name="prin sig" accept="image/*" class="custom-file-input" id="prin-sig-input">
+                        <label for="prin-sig-input" class="custom-file-label">Upload</label>
+                    </div>
+                    <ul class="list-group prin-sig-box list-group-horizontal d-none">
+                        <li class="list-group-item prin-sig-li p-0 px-2 w-100"></li>
+                        <li class="list-group-item bg-danger py-2 px-3"><i class="fa fa-trash text-white text-center del-prin-sig-btn" style="font-size: 30px"></i></li>
+                    </ul>
+                    <h5 class="mt-3">Find Student by Class</h5>
+                    <select name="student class" id="stu-class-find" class="form-control">
+                        <option>Choose Class</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-9 py-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="bg-white text-center mx-auto position-relative px-3 py-3 mb-3 set-fee" width="95%">
+                            <img src="../images/check_fee.png" alt="check fees" width="120" id="check-fee-btn"
+                                style="position: absolute;top:0;right:0">
+                            <h6 class="mb-3">SET FEES FOR CLASSES</h6>
+                            <form id="set-amount-form">
+                                <input type="number" name="class" id="student-class" placeholder="enter student class"
+                                    class="form-control mb-3 border-0 shadow-sm">
+                                <div class="add-item-inputs">
+                                    <div class="input-group mb-3">
+                                        <input type="text" name="fee name" placeholder="fees name"
+                                            class="form-control border-0 shadow-sm fee-name mr-1">
+                                        <input type="number" name="fee" placeholder="fee"
+                                            class="form-control  border-0 shadow-sm fee ml-1">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text bg-warning border-0">Monthly</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary add-btn"><i class="fa fa-plus"></i> Add
+                                        field</button>
+                                    <button type="submit" class="btn btn-danger amount-btn">Set Amount</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="bg-white text-center mx-auto position-relative px-4 py-3 mb-3" width="95%">
+                            <h6 class="m-0">GET INVOICE</h6>
+                            <input type="number" name="addmision no"
+                                class="form-control admission-no border-0 shadow-sm mb-3"
+                                placeholder="enter admission no">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-warning border-0 shadow-sm">invoice no</span>
+                                </div>
+                                <input type="date" class="form-control invoice-date border-0 shadow-sm"
+                                    name="invoice-date">
+                            </div>
+                            <div align="right">
+                                <button class="btn btn-danger invoice-btn">Get Invoice</button>
+                            </div>
+                        </div>
+                        <div class="bg-white text-center mx-auto position-relative px-4 py-3" width="95%">
+                            <h6 class="m-0">FIND STUDENT</h6>
+                            <input type="number" name="find student"
+                                class="form-control find-student border-0 shadow-sm mb-3" placeholder="enter admission no">
+                            <div align="right">
+                                <button class="btn btn-danger find-student-btn">Find now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="height:560px">
+                        <div class="bg-white mx-auto position-relative px-4 pt-3 pb-4" width="95%"
+                            style="height:100%;overflow: scroll;overflow-x: hidden">
+                            <img src="../images/take_adm.png" alt="admission" width="150"
+                                style="position: absolute;top:0;left:0">
+                            <button class="btn btn-dark position-absolute py-0 rounded-0 invoice-no" style="right:5px;top:0"></button>
+                            <h6 class="mb-3 text-center">TAKE ADMISSION</h6>
+                            <form id="admission-form">
+                                <div class="media mt-3">
+                                    <div class="media-img border position-relative" style="width:130px;">
+                                        <img src="../images/upload_pic.png" alt="upload_pic" width="100%"
+                                            id="profile-pic">
+                                        <input type="file" accept="image/*" name="upload input" id="upload-img-btn"
+                                            style="width:100%;height:100%;opacity:0;position:absolute;top:0;left:0;">
+                                    </div>
+                                    <div class="media-content w-100 pl-4 mb-3">
+                                        <input type="text" name="student name" id="student-name"
+                                            placeholder="Student name" required='required'
+                                            class="form-control mb-3 border-0 shadow-sm">
+                                        <input type="text" name="father name" id="father-name" placeholder="Father name"
+                                            required='required' class="form-control border-0 shadow-sm">
+                                    </div>
+                                </div>
+                                <input type="text" name="mother name" id="mother-name" placeholder="Mother name"
+                                    required='required' class="form-control border-0 shadow-sm mb-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span
+                                            class="input-group-text bg-primary border-0 text-white shadow-sm">DOB</span>
+                                    </div>
+                                    <input type="date" name="dob" id="dob" required='required'
+                                        class="form-control border-0 shadow-sm">
+                                    <select name="gender" id="gender" required='required'
+                                        class="custom-control border-0 shadow-sm" style="margin-left:1px">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <span
+                                            class="input-group-text border-0 text-white bg-primary shadow-sm">Gender</span>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-primary text-white border-0 shadow-sm">Mobile
+                                            No</span>
+                                    </div>
+                                    <input type="number" name="mobile one" required='required' id="mobile-one"
+                                        class="form-control border-0 shadow-sm">
+                                    <input type="number" name="mobile two" id="mobile-two"
+                                        class="form-control border-0 shadow-sm">
+                                </div>
+                                <select name="class" id="class-student" required='required'
+                                    class="form-control mb-3 border-0 shadow-sm">
+                                    <option value="choose class">Choose Class</option>
+                                </select>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-primary text-white border-0 shadow-sm">Admited
+                                            In</span>
+                                    </div>
+                                    <select name="admited in" required='required' id="admit-in"
+                                        class="form-control border-0 shadow-sm">
+                                        <option value="school">School</option>
+                                        <option value="hostel">Hostel</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span
+                                            class="input-group-text border-0 bg-primary text-white shadow-sm">Address</span>
+                                    </div>
+                                    <textarea name="address" id="address"
+                                        class="form-control border-0 shadow-sm"></textarea>
+                                </div>
+
+                                <div class="alert-box m-0 mb-3">
+                                </div>
+                                <button type="submit" class="btn btn-danger float-right admit-btn">Admit now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--start check fee modal coding-->
+
+    <div class="modal animated slideInDown faster" id="check-fee-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="mx-auto">Fee Detailes</h5>
+                </div>
+                <div class="modal-body" id="show-fee-table">
+
+                </div>
+                <div class="modal-footer bg-warning">
+                    <button class="btn btn-primary">Print</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--end check fee modal coding-->
+</body>
+
+</html>

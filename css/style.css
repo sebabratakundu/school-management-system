@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+body{
+    background-image:url(../images/bg.jpg);
+    background-size:cover;
+}
+
+#bg-box{
+    background:rgba(0,0,0,0.5);
+    height:100vh;
+}
+
+#register{
+    font-family:calibri;
+}
+
+#form-box a.nav-link.active{
+    color:black !important;
+}

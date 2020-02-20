@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>
+        student
+    </title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/student.js"></script>
+</head>
+
+<body>
+
+    <script>
+        if (sessionStorage.getItem('login') == null) {
+            window.location = 'https://www.google.com';
+        }
+    </script>
+    <div class="container-fluid mt-3">
+        <div class="d-flex mb-3 flex-column">
+            <div class="school-logo d-flex justify-content-center"></div>
+            <div class="text-center">
+                <h2 class="school-name mt-4 text-info"></h2>
+                <span class="tag text-capitalize font-italic"></span>
+            </div>
+        </div>
+        <table class="table table-bordered student-table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>PIC</th>
+                    <th>STUDENT NAME</th>
+                    <th>FATHER NAME</th>
+                    <th>MOTHER NAME</th>
+                    <th>DOB</th>
+                    <th>DOA</th>
+                    <th>MOBILE ONE</th>
+                    <th>MOBILE TWO</th>
+                    <th>ADDRESS</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <span class="prin-sign"></span>
+                <span class="prin-text"></span>
+            </div>
+            <div class="col-md-6 text-center">
+                <span class="dir-sign"></span>
+                <span class="dir-text"></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
